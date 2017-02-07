@@ -62,7 +62,7 @@ module.exports.decode = function(string) {
 	while (char_nbr < string_len) {
 		var idx = string.charCodeAt(char_nbr++) - 32;
 		if ((idx < 0) || (idx >= decoder.length)) {
-			delete dest;
+			dest = undefined;
 			return;
 		}
 		value = (value * 85) + decoder[idx];
